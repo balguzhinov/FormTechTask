@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>User list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+
+<center>
+    <br><br>
+<h2 style="color:green">All the records</h2>
+    <br><br>
+
+<table class="table table-bordered table table-hover" style="width:800px">
+    <tr style="color:red">
+        <th>Name</th>
+        <th>City</th>
+        <th>Address</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}">Steve</td>
+        <td th:text="${user.city}">Brooklyn</td>
+        <td th:text="${user.address}">Address</td>
+    </tr>
+</table>
+
+<p>
+    <a href="/home"><button type="button" class="btn btn-primary">Return to home</button></a>
+</p>
+
+</center>
+</body>
+
+</html>
